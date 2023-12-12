@@ -1,5 +1,4 @@
 
-
 var shoppingCart = (function() {
   // =============================
   // Private methods and propeties
@@ -34,16 +33,21 @@ var shoppingCart = (function() {
   
   // Add to cart
   obj.addItemToCart = function(name, price, count) {
-    for(var item in cart) {
+    if(name !== undefined){
+for(var item in cart) {
       if(cart[item].name === name) {
         cart[item].count ++;
         saveCart();
+        alert("Item Count increased in cart")
         return;
       }
     }
     var item = new Item(name, price, count);
     cart.push(item);
     saveCart();
+    alert("Item added to cart")
+    }
+    
   }
   // Set count from item
   obj.setCountForItem = function(name, count) {
@@ -140,10 +144,18 @@ var shoppingCart = (function() {
 // Add item
 $('.add-to-cart').click(function(event) {
   event.preventDefault();
-  var name = $(this).data('name');
+  if(sessionStorage.getItem('username')){
+ var name = $(this).data('name');
   var price = Number($(this).data('price'));
+
   shoppingCart.addItemToCart(name, price, 1);
   displayCart();
+  }
+  else{
+     alert('Please Login and then proceed');
+      window.location.href = "../html/login.html"
+  }
+ 
 });
 
 // Clear items
@@ -152,7 +164,21 @@ $('.clear-cart').click(function() {
   displayCart();
 });
 
+document.getElementById('cart-button').addEventListener('click', function() {
+    // Your function to be triggered when the span is clicked
+if (sessionStorage.getItem("username") ) {
 
+  }
+  else{
+    console.log("hii")
+   alert('Please login first!');
+     window.location.href = "../html/login.html"
+  }
+  
+  
+      
+  
+});
 function displayCart() {
   var cartArray = shoppingCart.listCart();
   var output = "";
@@ -168,7 +194,7 @@ function displayCart() {
       + "<td>" + cartArray[i].total + "</td>" 
       +  "</tr>";
   }
-  console.log(cartArray);
+
   $('.show-cart').html(output);
   $('.total-cart').html(shoppingCart.totalCart());
   $('.total-count').html(shoppingCart.totalCount());
@@ -178,7 +204,9 @@ function displayCart() {
 
 $('.show-cart').on("click", ".delete-item", function(event) {
   var name = $(this).data('name')
+    console.log("before",shoppingCart);
   shoppingCart.removeItemFromCartAll(name);
+    console.log(shoppingCart);
   displayCart();
 })
 
