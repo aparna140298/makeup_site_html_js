@@ -1,0 +1,164 @@
+
+/*
+<!-- This website template was created by: Reshma Raj,Aparna Aravind and Aneeta Mary 09 July 2023- -->
+making 2 columns image and content*/
+.col-2{
+	flex-basis: 50%;
+	min-width: 300px;
+
+}
+.col-2 img{
+	       max-width: 100%;
+    max-height: 24rem;
+    padding: 0.5em 0.5em;
+}
+/*rating star color*/
+.star{
+	color: #ff523b;
+}
+/*setting the body background color*/
+
+.single-product{
+	background: radial-gradient(#fff,#ffd6d6);
+}
+
+/*font awesome styling*/
+.single-product .fa{
+	color: #ff523b;
+	margin-left: 0.5rem;
+}
+
+/*setting padding*/
+.single-product .col-2 {
+	padding-top: 3rem;
+    padding-left: 5rem;
+    padding-bottom: 3rem;
+    padding-right: 4rem;
+}
+}
+.single-product h4{
+/*	margin: 20px 0;*/
+	font-size: 22px;
+	font-weight: bold;
+}
+
+/*
+styling for input*/
+.single-product input{
+	width: 50px;
+	height: 40px;
+	font-size: 20px;
+	margin-right: 10px;
+	border: 1px solid ;
+	padding-left: 10px;
+}
+
+/*body styling*/
+.small-container{
+	max-width: 100%;
+	margin: auto;
+	padding-left: 25px;
+	padding-right: 25px;
+	height: 35rem;
+}
+/*setting the background color*/
+.cart-page{
+
+	    background: radial-gradient(#fff,#ffd6d6);
+}
+/*styling table*/
+table{
+    margin-left: 3rem;
+    width: 94%;
+    border-collapse: collapse;
+}
+/*making button move to right*/
+.side{
+	float: right;
+}
+.cart-info{
+	display: flex;
+	flex-wrap: wrap;
+}
+/*image setting*/
+.pic{
+display: block;
+  /*  max-width: 100%;
+    max-height: 10rem;
+        width: unset;*/
+}
+/*table styling*/
+th{
+	text-align: left;
+	paddng: 2rem;
+	color: #fff;
+	background: #ff523b;
+	font-weight: normal;
+}
+td{
+	padding: 0.5rem ;
+}
+/*table input styling*/
+td input{
+	width: 40px;
+	height: 30px;
+	padding: 5px;
+} 
+td a{
+	color: #ff523b;
+	font-size:12px ;
+}
+td img{
+	width: 80px;
+	height: 80px;
+	margin-right: 10px;
+}
+.total-price{
+	display: flex;
+	justify-content: flex-end;
+}
+.total-price table{
+	    border-top: 3px solid #ff523b;
+    width: 100%;
+    max-width: 31rem;
+        margin-right: 1rem;
+}
+/*making the last column data of table to right side*/
+td:last-child{
+	text-align: right;
+}
+/*making the last column header of table to right*/
+th:last-child{
+	text-align: right;
+}
+/*styling for small device*/
+
+@media only screen and (max-width : 600px){
+	.cart-info p{
+		display: none;
+	}
+	.nav__container{
+    display: block;
+  }
+
+  .nav__logo img{
+    margin: auto;
+    width:5em ;
+    height:4em ;
+  }
+  
+  .nav__links{
+    margin: 1em;
+    justify-content: space-evenly;
+  }
+
+  .nav__icons{
+    justify-content:space-between;
+  }
+  
+  .nav__icons span{
+    margin: auto;
+    margin: 0.5em;
+
+  }
+}

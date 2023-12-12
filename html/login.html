@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- This website template was created by: Reshma Raj,Aparna Aravind and Aneeta Mary 09 July 2023- -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Styling a SignUp Form</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="icon" href="../img/icon1.jpg" type="image/x-icon"/>
+  </head>
+
+  <body>
+    <div class="signupFrm">
+      <!-- forms with input fields -->
+      <div class="wrapper"  id="signupForm">
+        <form action="" class="form" onsubmit="signup(event)" id="signup">
+          <h1 class="title">Sign up</h1>
+          <!-- adding fields -->
+        <!-- div class="inputContainer">
+          <input type="text" class="input" placeholder="a" required>
+          <label for="" class="label">Email</label>
+        </div> -->
+        <!-- for username field -->
+        <div class="inputContainer">
+          <input id="signupUsername" type="text" class="input" placeholder="a" required>
+          <label for="" class="label">Username</label>
+        </div>
+
+        <div class="inputContainer">
+          <input type="Password" class="input" placeholder="a" id="signupPassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+          <label for="" class="label">Password</label>
+          
+        </div>
+<div id="message">
+  <h3 style="color:#DADCE0">Password must contain the following:</h3>
+  <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+  <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+  <p id="number" class="invalid">A <b>number</b></p>
+  <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+</div>
+        
+          <span style="display: flex;">
+             <a href="index.html" style="display: contents;"><input type="button" class="submitBtn" value="Back" class="back"></a>&nbsp;
+              <input type="submit" class="submitBtn" value="Sign up" style="margin-left: unset;" >
+          </span>
+                       <p class="toggle-btn" onclick="toggleForm('loginForm')">Already have an account? Login</p>
+
+       </form>
+
+  </div>
+  <div class="wrapper" id="loginForm" style="display: none;">
+        <form action="" class="form" onsubmit="login(event)">
+          <h1 class="title">Login</h1>
+      
+        <!-- for username field -->
+        <div class="inputContainer">
+          <input type="text" class="input" placeholder="a" required id="loginUsername">
+          <label for="" class="label">Username</label>
+        </div>
+
+        <div class="inputContainer">
+          <input type="Password" class="input" placeholder="a" id="loginPassword">
+          <label for="" class="label">Password</label>
+        </div>
+
+       
+          <!-- adding buttons -->
+          <span style="display: flex;">
+             <a href="index.html" style="display: contents;">
+              <input type="button" class="submitBtn" value="Back" class="back"></a>&nbsp;
+              <input type="submit" class="submitBtn" value="Login" style="margin-left: unset;" id="logIn">
+            
+          </span>
+                  <p class="toggle-btn" onclick="toggleForm('signupForm')">Don't have an account? Sign up</p>
+       </form>
+
+
+      </div>
+     
+</div>
+      
+    <script src="../js/login.js"></script>
+  </body>
+</html>

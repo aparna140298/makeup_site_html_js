@@ -1,0 +1,461 @@
+/*<!-- This website template was created by: Reshma Raj,Aparna Aravind and Aneeta Mary 09 July 2023- -->
+*/@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+/*Define custom CSS variables*/
+:root {
+  --primary-color: #f1faff;
+  --text-dark: #030712;
+  --text-light: #6b7280;
+  --extra-light: #fbfbfb;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.link{
+  display: grid;
+}
+
+/* styles.css */
+
+/* Reset default list styles */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style the social icons */
+.social-icons {
+  display: flex;
+}
+
+
+.social-icons img {
+  width: 40px; /* Adjusts the size of the icons as needed */
+  height: 40px;
+  border-radius: 50%; /* Optional: Make the icons circular */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Optional: Add a subtle shadow */
+}
+
+/* Optional: Hover effect */
+.social-icons img:hover {
+  transform: scale(1.1); /* Enlarge the icon on hover */
+}
+
+.add-to-cart {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #E80071;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Sets the background color to green when hover */
+.add-to-cart:hover {
+  background-color: #45a049;
+}
+
+.add-to-cart:active {
+  background-color: #3e8e41;
+}
+
+
+
+/* Media query for responsive layout */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
+  
+
+
+.section__container {
+  max-width: var(--max-width); /* sets the max-width to 1200px */
+  margin: auto; /* Horizontally center the element */
+  padding: 5rem 1rem; /* sets the padding of 5rem at the top and bottom, and 1rem on the left and right.*/
+}
+
+.section__title {
+  padding-bottom: 0.5rem; /* Set bottom padding to 0.5 rem for spacing below the element */
+  margin-bottom: 4rem;/* Add a bottom margin of 4 rem to create space between */
+  text-align: center;/* Center the text content horizontally within the element */
+  font-size: 2rem;/* Set the font size to 2 rem for larger text */
+  font-weight: 600;/* Apply a font weight of 600 for a bolder text appearance */
+  color: var(--text-dark);
+  position: relative;/* Position the element relative to its normal position*/
+}
+
+.section__title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: 3px;
+  width: 75px;
+  background-color: var(--text-dark); /*Apply a background color, using a custom CSS variable */ 
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  font-size: 0.8rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+a {
+  text-decoration: none; /*Remove the default underline decoration from linked text*/
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.header__bar {
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  text-align: center;
+  background-color:#E80071;
+  color: var(--white);
+}
+
+.nav__container {
+  padding: 0em 0.1em 0.1em 0.1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;/* evenly distribute  the space*/
+}
+
+.nav__logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.link a {
+  padding: 0 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-light);
+  transition: 0.3s;
+}
+
+.link a:hover {
+  color: var(--text-dark);
+}
+
+.nav__icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav__icons span {
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+header {
+  margin-top: 3rem;
+  background-color: var(--primary-color);
+}
+
+.header__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.header__content p {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+
+.header__content h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  color: var(--text-dark);
+}
+
+.header__content .btn {
+  background-color: var(--text-dark);
+  color: var(--white);
+}
+
+.header__image {
+  position: relative;
+}
+
+.header__image img {
+  max-width: 400px;
+  position: absolute;
+  bottom: -5rem;
+}
+
+
+.sale__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.sale__card {
+  position: relative;
+  overflow: hidden;
+}
+
+.sale__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);/* horizontal and vertical centering*/
+  width: 100%;
+  color: var(--white);
+  text-align: center;
+}
+
+.sale__title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.sale__title span {
+  font-size: 2.5rem;
+}
+
+.sale__subtitle {
+  font-size: 1rem;
+}
+
+.sale__btn {
+  margin-top: 2rem;
+  color: var(--white);
+  background-color: var(--text-dark);
+}
+
+.sale__card::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: -100%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.5s; /*transition effect with a duration */
+}
+
+.sale__card:hover::before {
+  top: 0;
+}
+
+.sale__card:hover .sale__btn {
+  color: var(--text-dark);
+  background-color: var(--white);
+}
+
+.musthave__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.musthave__nav a {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-light);
+  transition: 0.3s;
+}
+
+.musthave__nav a:hover {
+  color: var(--text-dark);
+}
+
+.show-cart li {
+  display: flex;
+}
+.card {
+  margin-bottom: 20px;
+}
+.card-img-top {
+  width: 200px;
+  height: 200px;
+  align-self: center;
+}
+.musthave__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.musthave__card {
+  display: grid;
+  gap: 0.5rem;
+  color: var(--text-dark);
+}
+
+.musthave__card h4 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.musthave__card p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.musthave__card p del {
+  font-weight: 400;
+  color: var(--text-light);
+}
+
+
+.footer__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.footer__heading {
+/*  color: var(--text-light);*/
+  font-size: 1rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.footer__heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 50px;
+  background-color: var(--text-light);
+}
+
+.footer__col p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+/*  color: var(--text-light);*/
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+.footer__col p i {
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+.footer__bar {
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+
+@media (width < 900px) {
+  header {
+    margin-top: 5rem;
+  }
+
+  .sale__grid {
+    grid-template-columns: repeat(2, 1fr);/* displaying 2 items side by side*/
+  }
+
+  .musthave__grid {
+    grid-template-columns: repeat(3, 1fr);  /* displaying 3 items side by side*/
+    gap: 1rem;
+  }
+
+}
+
+@media (width < 600px) {
+ 
+.bomb{
+  display: none;
+}
+.nav__container{
+    display: block;
+  }
+
+  .nav__logo img{
+    margin: auto;
+    width:5em ;
+    height:4em ;
+  }
+  
+  .nav__links{
+    margin: 1em;
+    justify-content: space-evenly;
+  }
+
+  .nav__icons{
+    justify-content:space-between;
+  }
+  
+  .nav__icons span{
+    margin: auto;
+    margin: 0.5em;
+
+  }
+  header {
+    margin-top: 0;
+  }
+
+  .header__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+ .header__image {
+    display: none;
+  }
+
+  .sale__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .musthave__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+    .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+.header__bar{
+      width: 39rem;
+}
+
+}

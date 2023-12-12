@@ -1,0 +1,255 @@
+/*<!-- This website template was created by: Reshma Raj,Aparna Aravind and Aneeta Mary 09 July 2023- -->
+*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #f1faff;
+  --text-dark: #030712;
+  --text-light: #6b7280;
+  --extra-light: #fbfbfb;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* styling the container which is the outer box for header,footer*/
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 3rem 1rem;
+}
+
+/* styling the heading of products*/
+.section__title {
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: black;
+  position: relative;
+}
+
+/* styling the button in the banner*/
+.btn {
+  padding: 0.75rem 2rem;
+  font-size: 0.8rem;
+  outline: none; 
+  border: none; 
+  cursor: pointer;  
+  transition: 0.3s; 
+}
+
+/* styling the anchor tag */
+a {
+  text-decoration: none;
+}
+
+/* styling the image */
+img {
+  width: 100%;
+  max-height:100% ;
+  display: block;
+}
+
+/* styling the body font */
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* styling the header */
+.header__bar {
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  text-align: center;
+  background-color: #e80071;
+  color: var(--white);
+}
+
+/* styling the navigation section */
+.nav__container {
+  padding: 0em 0.1em 0.1em 0.1rem ;
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
+}
+
+/* styling the logo section inside the navigation bar*/
+.nav__logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+/* styling the links of navigation bar */
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* styling the anchor tags of hyperlink */
+.link a {
+  padding: 0 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-light);
+  transition: 0.3s;
+}
+
+/* styling the anchor tag when hovering */
+.link a:hover {
+  color: var(--text-dark);
+}
+
+/* styling the icons of nav bar*/
+.nav__icons {
+  display: flex;
+  gap: 1rem;
+}
+
+/* styling the icons of nav bar */
+.nav__icons span {
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+/* styling the banner background*/
+.banner {
+   background-color: var(--primary-color);
+}
+
+/* styling the banner items in 2 column display */
+.banner__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* styling the p tag in banner */
+.banner__content p {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+
+/* styling the h1 tag in banner */
+.banner__content h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  color: var(--text-dark);
+}
+
+/* styling the button in banner */
+.banner__content .btn {
+  background-color: var(--text-dark);
+  color: var(--white);
+}
+
+/* styling the musthave container for images */
+.musthave__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+/* styling each musthave card for images */
+.musthave__card {
+  display: grid;
+  gap: 0.5rem;
+  color: var(--text-dark);
+}
+
+/*styling each image tag  */
+.musthave__card img{
+  max-width: 100%;
+  height: 44vh;
+}
+
+/* styling the h4 tag in musthave card */
+.musthave__card h4 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* styling the p tag in musthave card */
+.musthave__card p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+/* styling the del tag in musthave card */
+.musthave__card p del {
+  font-weight: 400;
+  color: var(--text-light);
+}
+
+
+@media only screen and (max-width < 900px) {
+  header {
+    margin-top: 5rem;
+  }
+
+  .musthave__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .footer__bar {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media only screen and (width < 600px) {
+  .nav__container{
+    display: block;
+  }
+
+  .nav__logo img{
+    margin: auto;
+    width:5em ;
+    height:4em ;
+  }
+  
+  .nav__links{
+    margin: 1em;
+    justify-content: space-evenly;
+  }
+
+  .nav__icons{
+    justify-content:space-between;
+  }
+  
+  .nav__icons span{
+    margin: auto;
+    margin: 0.5em;
+
+  }
+  
+  .banner__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .banner__image {
+    display: none;
+  }
+  
+  .musthave__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+

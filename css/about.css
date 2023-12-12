@@ -1,0 +1,135 @@
+/*<!-- This website template was created by: Reshma Raj,Aparna Aravind and Aneeta Mary 09 July 2023- -->
+*/
+/*setting body background color*/
+body{
+	background-color: #f2f2f2;
+}
+/*styling the main heading in center*/
+.heading{
+	width: 90%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	margin: 20px auto;
+}
+/*styling the heading in  heading title color and fontsize*/
+.heading h1{
+	font-size: 50px;
+	color: #000;
+	margin-bottom: 25px;
+	position: relative;
+}
+
+/* styling the paragraph of heading*/
+
+.heading p{
+	font-size: 18px;
+	color: #666;
+	margin-bottom: 1rem;
+}
+
+.container{
+	width: 90%;
+	margin :0 auto ;
+	padding: 10px 20px;
+}
+/*styling the content to make the content and image appear side by side*/
+
+.about{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+/*styling the image div*/
+.about-image{
+	margin-right: 40px;
+	overflow: hidden;
+	    max-width: 16rem;
+}
+/*styling image*/
+.about-image img{
+	max-width: 100%;
+	height: auto;
+	display: block;
+	transition: 0.5s ease;
+}
+/*styling effect when hovered on image*/
+.about-image:hover img{
+	transform: scale(1.2);
+}
+/*the content will have more width*/
+.about-content{
+	flex: 1;
+}
+/*styling for the right side content*/
+.about-content h2{
+	font-size: 23px;
+	margin-bottom: 15px;
+	color: #333;
+}
+
+
+
+.about-content p{
+	font-size: 18px;
+	line-height: 1.5;
+	color: #666;
+}
+/*styling the button*/
+.about-content .read-more{
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #4caf50;
+	color: #fff;
+	font-size: 19px;
+	text-decoration: none;
+	border-radius: 25px;
+	margin-top: 15px;
+	transition: 0.3s ease;
+}
+/*styling the button*/
+
+.about-content.read-more:hover{
+	background-color: #3e8e41;
+}
+
+/*styling the responsivness of mobile device
+*/
+@media screen and (max-width: 768px){
+
+	.heading{
+		padding: 0px  20px;
+	}
+
+	.heading h1{
+		font-size: 36px;
+	}
+	.heading p{
+		font-size: 17px;
+		margin-bottom: 0px;
+	}
+	.container{
+		padding: 0px;
+	}
+	.about{
+		padding: 20px;
+		flex-direction: column;
+	}
+	.about-image{
+		margin-right: 0px;
+		margin-bottom: 20px;
+	}
+
+
+	.about-content p{
+		padding: 0px;
+		font-size: 16px;
+	}
+
+	.about-content .read-more{
+		font-size: 16px;
+	}
+}
