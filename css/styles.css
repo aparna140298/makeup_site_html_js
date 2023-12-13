@@ -336,6 +336,24 @@ header {
   color: var(--text-light);
 }
 
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background-color: #072f5a; /* You can change the color */
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #6fa4dd; /* You can change the hover color */
+}
+
 
 .footer__container {
   display: grid;
@@ -407,6 +425,11 @@ header {
 .bomb{
   display: none;
 }
+
+.header__bar{
+  font-size:50%;
+}
+
 .nav__container{
     display: block;
   }
@@ -454,8 +477,5 @@ header {
     .footer__container {
     grid-template-columns: repeat(2, 1fr);
   }
-.header__bar{
-      width: 39rem;
-}
 
 }
