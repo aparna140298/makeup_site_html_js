@@ -47,6 +47,26 @@
       <div class="map-container">
          <iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2880.8788874769834!2d-79.26038852429363!3d43.775372844521186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d1a641e645df%3A0xf5b63df4538043ea!2sScarborough%20Town%20Centre!5e0!3m2!1sen!2sca!4v1690762638719!5m2!1sen!2sca" allowfullscreen></iframe>
       </div>
+      <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="show-cart table"></table>
+        <div>Total price: $<span class="total-cart"></span></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="order">Order now</button>
+        <button class="clear-cart btn btn-danger" id="clear">Clear Cart</button></div> 
+      </div>
+    </div>
+  </div>
     </div>
 
       <!-- Footer section -->

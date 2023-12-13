@@ -26,8 +26,9 @@
         <li class="link"><a href="contact.html">CONTACT</a></li>
       </ul>
       <div class="nav__icons">
-        <span><i class="ri-shield-user-line"></i>Account</span>
-        <span><i class="ri-shopping-bag-2-line">Cart</i></span>
+        <span ><i class="ri-shield-user-line"></i><a href="login.html" id="account">Account</a></span>
+ <span id ="cart-button"><i class="ri-shopping-bag-2-line" data-toggle="modal" data-target="#cart">Cart(<span class="total-count"></span>)</i></span>
+          <span id="mySpan"><i class="fas fa-power-off"></i><a href="login.html" id="account">Sign Out</a></span>
       </div>
     </nav>
 
@@ -54,6 +55,26 @@
           <a href="" class="read-more"> Read More</a>
         </div>
       </section>
+        <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="show-cart table"></table>
+        <div>Total price: $<span class="total-cart"></span></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="order">Order now</button>
+        <button class="clear-cart btn btn-danger" id="clear">Clear Cart</button></div> 
+      </div>
+    </div>
+  </div>
     </div>
 
     <!-- footer section with address, company information, help and social media connection -->
@@ -87,5 +108,7 @@
         </div>
       </div>
     </footer> 
+     <script src="../js/index.js"></script>
+<script src="../js/cart.js"></script>
   </body>
 </html>
