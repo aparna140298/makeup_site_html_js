@@ -11,7 +11,9 @@ function accountInfo(){
       }
   
 }
+
 accountInfo();
+
 // script.js
 document.getElementById('mySpan').addEventListener('click', function() {
     // Your function to be triggered when the span is clicked
@@ -24,6 +26,7 @@ document.getElementById('mySpan').addEventListener('click', function() {
         signupForm.style.display = 'none';
   
 });
+
 if(sessionStorage.getItem('username')){
 	mySpan.style.display = 'block';
 }

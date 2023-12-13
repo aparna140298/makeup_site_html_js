@@ -10,6 +10,13 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="icon" href="../img/icon1.jpg" type="image/x-icon"/>
     <title>Shop</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- Bootstrap JS dependencies -->
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   </head>
     
  <!--  body section with nav, products card, and footer -->
@@ -24,9 +31,13 @@
         <li class="link"><a href="about.html">ABOUT</a></li>
         <li class="link"><a href="contact.html">CONTACT</a></li>
       </ul>
+
       <div class="nav__icons">
-        <span><i class="ri-shield-user-line"></i><a href="login.html">Account</a></span>
-        <span><i class="ri-shopping-bag-2-line"><a href="cart.html">Cart</a></i></span>
+        <span><i class="ri-shield-user-line"></i><a href="login.html" id="account">Account</a></span>
+
+        <!-- <span><i class="ri-shopping-bag-2-line"><a href="cart.html">Cart</a></i></span> -->
+        <span id ="cart-button"><i class="ri-shopping-bag-2-line" data-toggle="modal" data-target="#cart">Cart(<span class="total-count"></span>)</i></span>
+          <span id="mySpan"><i class="fas fa-power-off"></i><a href="login.html" id="account">Sign Out</a></span>
       </div>
     </nav>
 
@@ -40,8 +51,7 @@
             </a>  <!--  1 -->
             <h4>F.L Studio Fix Compact Powder</h4>
             <p><del>$45.00</del> $75.00</p>
-            <a href="cart.html" class="link">
-            <button class="add-to-cart">
+            <button class="add-to-cart" data-name="F.L-Studio-Fix-Compact Powder" data-price="75">
               <i class="ri-shopping-cart-fill"></i> Add to Cart </button></a>
         </div>
         <div class="musthave__card">
@@ -295,6 +305,27 @@
             <i class="ri-shopping-cart-fill"></i> Add to Cart </button></a>    
         </div>
       </div>
+      
+      <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table class="show-cart table"></table>
+              <div>Total price: $<span class="total-cart"></span></div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" id="order">Order now</button>
+              <button class="clear-cart btn btn-danger" id="clear">Clear Cart</button></div> 
+            </div>
+          </div>
+        </div>
     </section>
 
     <!-- footer section with company details and connecting with social media -->
@@ -327,7 +358,12 @@
           <a href="https://www.twitter.com" style="padding-left:25px;"><img src="https://raw.githubusercontent.com/Aswin-k-ashok/sampleimages/master/instagram.png" alt="Instagram"></a>
         </div>
       </div>
-    </footer>   
+    </footer>
+    
+    <script src="../js/index.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
   </body>
 </html>
 
