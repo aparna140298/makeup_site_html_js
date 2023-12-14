@@ -1,104 +1,26 @@
-/*<!-- This website template was created by: Reshma Raj,Aparna Aravind and Aneeta Mary 09 July 2023- -->*/
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: white;
-  font-family: "lato", sans-serif;
-  background-image: url(../img/unsplash.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+  background-color: #ecf0f1; /* Lighter background color */
+  background-image: url('../img/unsplash.jpg');
+  font-family: "Lato", sans-serif;
+  color: whitesmoke;
 }
-/*
-to make the form appear in center aligned*/
+
+
 .signupFrm {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
-/* to make the back button float to right*/
-.back{
+
+.back {
   float: right;
-}
-/*to make the submit button to right*/
-.submit{
-  float: right;
-  margin-left: unset;
-}
- .toggle-btn {
-      margin-top: 10px;
-      cursor: pointer;
-      color: blue;
-      text-decoration: underline;
-    }
-/*setting form styling*/
-.form {
-  background-color: BLACK;
-  max-width: 100%;
-      width: 22rem;
-  border-radius: 8px;
-  padding: 20px 40px;
-  box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
-}
-/*setting the title styling*/
-.title {
-  font-size: 50px;
-  margin-bottom: 50px;
-  color: whitesmoke;
-}
-
-
-input {
-  color: white;
-  background-color: black;
-}
-::-ms-reveal {
-  filter: invert(100%);
-}
-.inputContainer {
-  position: relative;
-  height: 45px;
-  width: 90%;
-  margin-bottom: 17px;
-}
-
-.input {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width: 100%;
-  border: 1px solid #DADCE0;
-  border-radius: 7px;
-  font-size: 16px;
-  padding: 0 20px;
-  outline: none;
-  background: none;
-  z-index: 1;
-  color: white;
-}
-
-
-.label {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  padding: 0 4px;
-  background-color: transparent;
-  color: whitesmoke;
-  font-size: 16px;
-  transition: 0.5s;
-  z-index: 0;
-}
-
-::placeholder {
-  color: transparent;
 }
 
 .submitBtn {
@@ -118,54 +40,99 @@ input {
   background-color: #9867C5;
   transform: translateY(-2px);
 }
-.input:focus + .label {
-  top: -7px;
-  left: 3px;
-  z-index: 10;
-  font-size: 14px;
-  font-weight: 600;
+
+.toggle-btn {
+  margin-top: 10px;
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
+#progressBar {
+  background-color: green; /* Set the background color of the progress bar */
+}
+
+.form {
+  background-color: black; /* Changed form background color */
+  max-width: 100%;
+  width: 30rem;
+  border-radius: 8px;
+  padding: 20px 40px;
+  box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+  position: relative;
+  overflow-y: auto; /* Added scroll bar */
+  max-height: 80vh; /* Added max height for scroll */
+}
+
+.title {
+  font-size: 50px;
+  margin-bottom: 50px;
   color: whitesmoke;
-  background-color: rgba(0,0,0,0.5);
 }
 
-.input:not(:placeholder-shown)+ .label {
-  top: -7px;
-  left: 3px;
-  z-index: 10;
-  font-size: 14px;
-  font-weight: 600;
+.input {
+  height: 2rem;
+  color: white;
+  background-color: black; /* Changed input background color */
+  border: 1px solid #DADCE0;
+  border-radius: 7px;
+  font-size: 16px;
+  padding: 10px 20px;
+  outline: none;
+  width: calc(100% - 20px);
 }
+
+.label {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  padding: 0 4px;
+  background-color: black; /* Matched label background color */
+  color: whitesmoke;
+  font-size: 16px;
+  transition: 0.5s;
+  z-index: 0;
+}
+
+::placeholder {
+  color: transparent;
+}
+
+.inputContainer {
+  position: relative;
+  height: 45px;
+  width: 90%;
+  margin-bottom: 17px;
+}
+
 .password-hint {
-      display: none;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      background-color: #f4f4f4;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      position: absolute;
-      z-index: 1;
-    }
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #f4f4f4;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  z-index: 1;
+}
 
-    .password-hint li {
-      padding: 10px;
-      border-bottom: 1px solid #ddd;
-      cursor: pointer;
-    }
+.password-hint li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
 
-    input[type="password"]:hover + .password-hint {
-      display: block;
-    }
+input[type="password"]:hover+.password-hint {
+  display: block;
+}
 
-    /* The message box is shown when the user clicks on the password field */
 #message {
-  display:none;
-/*  background: #f1f1f1;*/
+  display: none;
+  border: 1px solid #DADCE0;
+  border-radius: 7px;
   color: #000;
   position: relative;
   padding: 20px;
   margin-top: 10px;
-      border: 1px solid #DADCE0;
-    border-radius: 7px;
 }
 
 #message p {
@@ -173,10 +140,21 @@ input {
   font-size: 18px;
 }
 
-/* Add a green text color and a checkmark when the requirements are right */
 .valid {
   color: green;
 }
+/* Add this to your existing CSS */
+.inputContainer .gender-options {
+  display: flex;
+
+    padding: 0.5em;
+  gap: 20px; /* Adjust the gap as needed */
+}
+
+.inputContainer .gender-options label {
+  margin: 0;
+}
+
 
 .valid:before {
   position: relative;
@@ -184,7 +162,6 @@ input {
   content: "✔";
 }
 
-/* Add a red text color and an "x" when the requirements are wrong */
 .invalid {
   color: red;
 }
@@ -195,12 +172,9 @@ input {
   content: "✖";
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 600px) {
   .form {
- max-width: 100%;
-  width: unset;
-  /*border-radius: 8px;
-  padding: 20px 40px;
-  box-shadow: 0 10px 25px rgba(92, 99, 105, .2);*/
-}
+    max-width: 100%;
+    width: unset;
+  }
 }

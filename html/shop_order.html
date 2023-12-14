@@ -11,6 +11,28 @@
       <link rel="stylesheet" href="../css/order.css" />
       <link rel="icon" href="../img/icon1.jpg" type="image/x-icon"/>
       <title> Bombshell</title>
+   <!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+ -->
+<!-- Bootstrap JS dependencies -->
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<style>
+  .product {
+  position: relative;
+}
+
+.product-image {
+/*  width: 200px;  Adjust as needed */
+  transition: transform 0.3s ease-in-out;
+}
+
+.product:hover .product-image {
+  transform: scale(1.2); /* Adjust the scale factor for the desired enlargement level */
+  cursor: pointer;
+}
+</style>
   </head>
 
   <!-- body section -->
@@ -20,22 +42,26 @@
       <a href="#" class="nav__logo"><img src="https://raw.githubusercontent.com/Aswin-k-ashok/sampleimages/master/logo1.png"></a>
       <ul class="nav__links">
         <li class="link"><a href="index.html">HOME</a></li>
-        <li class="link"><a href="#">SHOP</a></li>
-        <li class="link"><a href="#">PAGES</a></li>
-        <li class="link"><a href="#">BLOG</a></li>
-        <li class="link"><a href="#">LOOKBOOK</a></li>
+        <li class="link"><a href="makeup.html">SHOP</a></li>
+        <li class="link"><a href="about.html">ABOUT</a></li>
+        <li class="link"><a href="contact.html">CONTACT</a></li>
       </ul>
-      <div class="nav__icons">
-       <span><i class="ri-shield-user-line"></i><a href="login.html">Account</a></span>
-        <span><i class="ri-shopping-bag-2-line"><a href="cart.html">Cart</a></i></span>
+       <div class="nav__icons">
+        <span ><i class="ri-shield-user-line"></i><a href="login.html" id="account">Account</a></span>
+             <!--   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart (<span class="total-count"></span>)</button>
+               <button class="clear-cart btn btn-danger">Clear Cart</button></div> -->
+
+        <span id ="cart-button"><i class="ri-shopping-bag-2-line" data-toggle="modal" data-target="#cart">Cart(<span class="total-count"></span>)</i></span>
+          <span id="mySpan"><i class="fas fa-power-off"></i><a href="login.html" id="account">Sign Out</a></span>
+          
       </div>
     </nav>
 
 <!-- single product description-->
     <div class="small-container single-product">
         <div class="row">
-          <div class="col-2">
-             <img src="https://raw.githubusercontent.com/Aswin-k-ashok/sampleimages/master/sale-1.jpg" alt="must have"  width="100%"  />
+          <div class="col-2 product">
+             <img src="https://raw.githubusercontent.com/Aswin-k-ashok/sampleimages/master/sale-1.jpg" class="product-image"  id="productImage" alt="must have"  width="100%"  />
 
              <div class="small-img-row">
                 <div class="small-img-col">
@@ -59,7 +85,7 @@
           <div class="col-2">
              <p>Home/Shop</p>
              <h1>Luscious Red Lipstick</h1>
-             <h4>$17.00</h4><br>
+             <h4>$75.00</h4><br>
              <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -67,20 +93,42 @@
                 <i class="fa fa-star"></i>
                 <i class="far fa-star star"></i>          
              </div>
-             <select>
+             <!-- <select>
                 <option>Select Size</option>
                 <option>50ML</option>
                 <option>250ML</option>
                 <option>500ML</option>
              </select>
-             <input type="number" value="1" >
-             <a href="cart.html" class="btn">Add to Cart</a>
+             <input type="number" value="1" > -->
+               <button  class="add-to-cart" data-name="Lumene-Lipstick" data-price="75" class="add-to-cart">
+              <i class="ri-shopping-cart-fill"></i>Add to Cart</button>
+             <!-- <a href="cart.html" class="btn">Add to Cart</a> -->
              <h3 class="product">Product Details<i class="fa fa-indent"></i></h3>
              <p class="description">Introducing our premium lipstick, a luxurious blend of vibrant pigments and nourishing oils. Its creamy texture glides effortlessly, leaving your lips with a long-lasting, velvety finish. Elevate your look with this timeless beauty essential.</p>
           </div>
         </div>
     </div>
-
+<!-- <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="show-cart table"></table>
+        <div>Total price: $<span class="total-cart"></span></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       <a href="order.html"> <button type="button" class="btn btn-primary" id="order">Order now</button></a>
+        <button class="clear-cart btn btn-danger" id="clear">Clear Cart</button></div> 
+      </div>
+    </div>
+  </div> -->
+</div> 
     <!-- footer section -->
     <footer class="section__container footer__container">
       <div class="footer__col">
@@ -112,5 +160,20 @@
           <a href="https://www.twitter.com" style="padding-left:25px;"><img src="https://raw.githubusercontent.com/Aswin-k-ashok/sampleimages/master/instagram.png" alt="Instagram"></a>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="../js/index.js"></script>
+<script src="../js/cart.js"></script>
+<script src="../js/shop-order.js">
+  
+ 
+</script>
+        <!-- Bootstrap JS and Popper.js -->
+      <!--   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script> -->
+
+<!-- Bootstrap JavaScript -->
+<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> -->
   </body>
  </html>
