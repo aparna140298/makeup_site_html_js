@@ -15,7 +15,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-/*      background-color: beige;*/
 }
 .link{
   display: grid;
@@ -479,13 +478,4 @@ header {
     grid-template-columns: repeat(2, 1fr);
   }
 
-}
-@media only screen and (max-width: 767px) {
-    .header__bar {
-  padding: 0.5rem;
-  font-size: 0.8rem;
-  text-align: center;
-  background-color:Black;
-  color: var(--white);
-}
 }

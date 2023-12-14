@@ -1,5 +1,41 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+/* Add the following styles inside the <style> element in the <head> */
+@media (max-width: 768px) {
+  .nav__links {
+    display: none;
+  }
+
+  .navbar-toggler {
+    display: block;
+  }
+
+  .navbar-collapse {
+    background-color: #fff; /* Set the background color for the mobile menu */
+  }
+
+  .navbar-collapse.show {
+    display: block;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 769px) {
+  .navbar-toggler {
+    display: none;
+  }
+
+  .nav__links {
+    display: flex;
+  }
+}
 
 body {
   box-sizing: border-box;

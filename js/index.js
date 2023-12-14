@@ -53,3 +53,11 @@ scrollToTopBtn.addEventListener("click", function() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
 });
+  document.addEventListener("DOMContentLoaded", function () {
+  const hamburgerMenu = document.querySelector(".hamburger-menu");
+  const navLinks = document.querySelector(".nav__links");
+
+  hamburgerMenu.addEventListener("click", function () {
+    navLinks.classList.toggle("show");
+  });
+});

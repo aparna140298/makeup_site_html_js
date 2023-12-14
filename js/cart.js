@@ -170,7 +170,7 @@ if (sessionStorage.getItem("username") ) {
 
   }
   else{
-    console.log("hii")
+   
    alert('Please login first!');
      window.location.href = "../html/login.html"
   }
