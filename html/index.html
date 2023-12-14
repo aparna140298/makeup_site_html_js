@@ -20,7 +20,7 @@
        }
 
        .card {
-          margin-bottom: 20px;
+          margin-bottom: 20px; 
        }
 
        .card-img-top {
@@ -28,6 +28,84 @@
           height: 200px;
           align-self: center;
        }
+       .hamburger-menu {
+  display: none; /* Hide by default for larger screens */
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333; /* Adjust color as needed */
+  margin: 5px 0;
+}
+.try-on{
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .nav__links {
+    display: none; /* Hide normal navbar links for smaller screens */
+  }
+
+  .hamburger-menu {
+    display: block; /* Show hamburger menu button for smaller screens */
+  }
+/*.try-on{
+  display: block;
+}*/
+  /* Add styles for the dropdown menu when the button is clicked */
+  .nav__links.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust as needed */
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* Adjust background color as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+.try-on {
+    display: none; /* Hide by default */
+}
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+  .nav__links {
+    display: none; /* Hide normal navbar links for smaller screens */
+  }
+ .try-on {
+        display: inline-block; /* Show on smaller screens */
+    }
+  .hamburger-menu {
+    display: block;  Show hamburger menu button for smaller screens 
+  }
+
+  /* Add styles for the dropdown menu when the button is clicked */
+  .nav__links.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+       position: absolute;
+    width: 7rem;
+    top: 13rem;
+    left: 34rem;
+    max-width: 100%;
+    background-color: #fff; /* Adjust background color as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 915px) {
+.nav__links.show {
+  width: 7rem;
+    top: 17rem;
+    right: 0;
+}
+}
+
+
+
     </style>
      <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-3KnIo2Z+LlPpLlAqVv5f4OJefMI9CYbSR9YCCuX5pP1D3Qztn2cgGWCE7lDE7TyzGHtqOb8ZfHy9xcToDqjvhA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 <!-- Bootstrap CSS -->
@@ -53,9 +131,11 @@
         <li class="link"><a href="makeup.html">SHOP</a></li>
         <li class="link"><a href="about.html">ABOUT</a></li>
         <li class="link"><a href="contact.html">CONTACT</a></li>
+        <!--  <li class="link try-on" ><a href="video-try-on.html">Video Try ON</a></li> -->
       </ul>
       <div class="nav__icons">
         <span ><i class="ri-shield-user-line"></i><a href="login.html" id="account">Account</a></span>
+                <span class="try-on" ><i class="ri-video-line"></i><a href="video-try-on.html" >Video Try ON</a></span>
              <!--   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart (<span class="total-count"></span>)</button>
                <button class="clear-cart btn btn-danger">Clear Cart</button></div> -->
 
@@ -63,6 +143,11 @@
           <span id="mySpan"><i class="fas fa-power-off"></i><a href="login.html" id="account">Sign Out</a></span>
           
       </div>
+      <button class="hamburger-menu" id="hamburger">
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+</button>
     </nav>
 
       <!-- Banner to include images and offer -->
@@ -252,5 +337,20 @@
 
 <!-- Bootstrap JavaScript -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const hamburgerMenu = document.querySelector(".hamburger-menu");
+  const navLinks = document.querySelector(".nav__links");
+
+  hamburgerMenu.addEventListener("click", function () {
+    navLinks.classList.toggle("show");
+  });
+});
+$(document).ready(function () {
+        $("#hamburger").click(function () {
+            $(".try-on").toggle();
+        });
+    });
+</script>
   </body>
 </html>

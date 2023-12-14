@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Try-On</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        video {
+            position: relative;
+            width: 100%;
+            max-width: 640px;
+        }
+
+        #tryOnButton {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .lipstick-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+                /*width: 53px*//* Adjust the size of the lipstick */
+            height: auto;
+            display: none;
+            cursor: pointer;
+        }
+
+        @media only screen and (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            #tryOnButton {
+                display: block;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <video id="camera" playsinline autoplay></video>
+    <button id="tryOnButton" onclick="startMakeupTryOn()">Try On Lipstick Shade</button>
+    <img src="../img/lips.png" alt="Lipstick" class="lipstick-overlay" id="lipstickOverlay" style="width:10%">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const video = document.getElementById("camera");
+            const lipstickOverlay = document.getElementById("lipstickOverlay");
+
+            // Request access to the camera
+            navigator.mediaDevices.getUserMedia({ video: true })
+                .then((stream) => {
+                    video.srcObject = stream;
+                })
+                .catch((error) => {
+                    console.error("Error accessing camera:", error);
+                });
+
+            video.addEventListener("click", function (event) {
+                const x = event.clientX - video.offsetLeft;
+                const y = event.clientY - video.offsetTop;
+
+                lipstickOverlay.style.left = `${x}px`;
+                lipstickOverlay.style.top = `${y}px`;
+                lipstickOverlay.style.display = "block";
+            });
+        });
+
+        function startMakeupTryOn() {
+            const lipstickOverlay = document.getElementById("lipstickOverlay");
+            lipstickOverlay.style.display = "block";
+        }
+    </script>
+</body>
+</html>

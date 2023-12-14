@@ -1,5 +1,6 @@
 /*<!-- This website template was created by: Reshma Raj,Aparna Aravind and Aneeta Mary 09 July 2023- -->
-*/.row{
+*/
+.row{
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
