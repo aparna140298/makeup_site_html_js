@@ -11,10 +11,6 @@
       <link rel="icon" href="../img/icon1.jpg" type="image/x-icon"/>
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <style>
-       body {
-          padding-top: 80px;
-       }
-
        .show-cart li {
           display: flex;
        }
@@ -228,36 +224,38 @@
               <img src="https://raw.githubusercontent.com/Aswin-k-ashok/sampleimages/master/musthave-3.png" alt="must have" />
               <h4>Mac Moisturizer</h4>
               <p><del>$45.00</del> $75.00</p>
-              <a href="cart.html" class="link">
-                <button class="add-to-cart">
+              
+                 <button  class="add-to-cart" data-name="Mac-Moisturizer" data-price="75">
               <i class="ri-shopping-cart-fill"></i> Add to Cart</button></a>
          </div>
          <div class="musthave__card">
               <img src="https://raw.githubusercontent.com/Aswin-k-ashok/sampleimages/master/musthave-4.png" alt="must have" />
               <h4>Bio Glow Serum</h4>
               <p><del>$45.00</del> $75.00</p>
-              <a href="cart.html" class="link"><button class="add-to-cart">
+                              
+                <button  class="add-to-cart" data-name="Bio-Glow-Serum" data-price="75">
               <i class="ri-shopping-cart-fill"></i> Add to Cart</button></a>
          </div>
         <div class="musthave__card">
             <img src="https://raw.githubusercontent.com/Aswin-k-ashok/sampleimages/master/musthave-6.png" alt="must have" />
             <h4>Neccssaire Body Lotion</h4>
             <p><del>$45.00</del> $75.00</p>
-            <a href="cart.html" class="link"><button class="add-to-cart">
+            
+              <button  class="add-to-cart" data-name="Neccssaire-Body-Lotion" data-price="75">
             <i class="ri-shopping-cart-fill"></i> Add to Cart</button></a>
         </div>
         <div class="musthave__card">
             <img src="https://raw.githubusercontent.com/Aswin-k-ashok/sampleimages/master/musthave-7.png" alt="must have" />
             <h4>Curology Lotion</h4>
             <p><del>$45.00</del> $75.00</p>
-            <a href="cart.html" class="link"><button class="add-to-cart">
+            <button  class="add-to-cart" data-name="Curology-Lotion" data-price="75">
             <i class="ri-shopping-cart-fill"></i> Add to Cart </button></a>
         </div>
         <div class="musthave__card">
             <img src="https://raw.githubusercontent.com/Aswin-k-ashok/sampleimages/master/musthave-8.png" alt="must have" />
             <h4>Isstree Toner</h4>
             <p><del>$45.00</del> $75.00</p>
-            <a href="cart.html" class="link"><button class="add-to-cart">
+            <button  class="add-to-cart" data-name="Isstree-Toner" data-price="75">
             <i class="ri-shopping-cart-fill"></i> Add to Cart</button></a>
         </div>
         <div class="musthave__card">
@@ -272,26 +270,29 @@
 
     </section>
 <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <table class="show-cart table"></table>
-        <div>Total price: $<span class="total-cart"></span></div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-       <a href="order.html"> <button type="button" class="btn btn-primary" id="order">Order now</button></a>
-        <button class="clear-cart btn btn-danger" id="clear">Clear Cart</button></div> 
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table class="show-cart table"></table>
+            <div>Total price: $<span class="total-cart"></span></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="order">Order now</button>
+            <button class="clear-cart btn btn-danger" id="clear">Clear Cart</button></div> 
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div> 
+  </div>
      <!-- footer section -->
 
     <footer class="section__container footer__container">
@@ -327,13 +328,17 @@
    
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-  <script src="../js/index.js"></script>
-<script src="../js/cart.js"></script>
-        <!-- Bootstrap JS and Popper.js -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/cart.js"></script>
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
 
 <!-- Bootstrap JavaScript -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
